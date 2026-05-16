@@ -4,6 +4,7 @@
 VLAN 20, 30 a DMZ server:
 
 Router0(config)# interface Gig0/2
+
 Router0(config-if)# ip nat inside 
 
 Router0(config)# interface Gig0/1
