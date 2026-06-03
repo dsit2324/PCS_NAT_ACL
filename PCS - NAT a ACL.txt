@@ -1,6 +1,9 @@
 PCS - NAT a ACL
 
-!- Defaultní routa musí být nastavená na všech routerech -! (ip route 0.0.0.0 0.0.0.0 <adresa portu sousedního routeru>) (u výchozího je to ta PUBLIC !)
+!- Defaultní routa musí být nastavená na všech routerech -! 
+static - ip route 0.0.0.0 0.0.0.0 <adresa portu sousedního routeru> (u výchozího je to ta PUBLIC !)
+rip, ospf - (na výchozím) ip route 0.0.0.0 0.0.0.0 <adresa do PUBLIC portu>, do ospf dám default-information originate
+
 VLAN 20, 30 a DMZ server:
 
 Router0(config)# interface Gig0/2
